@@ -21,6 +21,7 @@ def get_pokemon():
         'weight': data['weight']
     }
     return pokemon_data
+
 def get_winner():
     print("First, I'll randomly assign you a pokemon!")
     my_pokemon = get_pokemon()
@@ -30,6 +31,7 @@ def get_winner():
     chosen_stat = ''
     while chosen_stat != "height" and chosen_stat != "weight":
         chosen_stat = input("Which stat would you like to compare? Height or weight? ").lower()
+
     if chosen_stat == "height": 
         if my_pokemon["height"] > opponent["height"]:
             print(f"Your pokemon's height, {my_pokemon['height']} is larger than its opponent, {opponent['height']}\n***\nYOU WIN\n***")
